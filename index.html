@@ -23,19 +23,34 @@ var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 var directionalLight = new THREE.DirectionalLight(0xffffff);
  directionalLight.position.set(1, 1, 1);
 scene.add(directionalLight);
-//なんかクネクネしてるやつ
-var torusKnotGeometry = new THREE.TorusKnotGeometry( 1.5, 0.3, 20, 6, 3, 2 );
-var torusKnotMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff, wireframe: true } );
-var torusKnot = new THREE.Mesh( torusKnotGeometry, torusKnotMaterial );
-torusKnot.position.set( 0, 0, -15 );
-scene.add( torusKnot );
+// 犬の頭の形をした立方体の作成
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({color: 0x8B4513});
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+// 耳の作成
+const earGeometry = new THREE.BoxGeometry(0.2, 0.5, 0.2);
+const earMaterial = new THREE.MeshBasicMaterial({color: 0x8B4513});
+const leftEar = new THREE.Mesh(earGeometry, earMaterial);
+const rightEar = new THREE.Mesh(earGeometry, earMaterial);
+
+leftEar.position.set(-0.6, 0.5, 0);
+rightEar.position.set(0.6, 0.5, 0);
+
+scene.add(leftEar);
+scene.add(rightEar);
 
 	 // 初回実行
 var update = function() {
  requestAnimationFrame(update);
  // 箱を回転させる
-torusKnot.rotation.x += 0.01;
- torusKnot.rotation.y += 0.01;
+cube.rotation.x += 0.01;
+　cube.rotation.y += 0.01;
+　leftEar.rotation.x += 0.01;
+　leftEar.rotation.y += 0.01;
+　rightEar.rotation.x += 0.01;
+　rightEar.rotation.y += 0.01;
  renderer.render(scene, camera);
  };
  update();
