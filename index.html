@@ -25,13 +25,13 @@ var directionalLight = new THREE.DirectionalLight(0xffffff);
 scene.add(directionalLight);
 // 犬の頭の形をした立方体の作成
 var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshBasicMaterial({color: 0x8B4513});
+var material = new THREE.MeshPhongMaterial({color: 0x8B4513});
 var cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 // 耳の作成
 var earGeometry = new THREE.BoxGeometry(0.2, 0.5, 0.2);
-var earMaterial = new THREE.MeshBasicMaterial({color: 0x8B4513});
+var earMaterial = new THREE.MeshPhongMaterial({color: 0x8B4513});
 var leftEar = new THREE.Mesh(earGeometry, earMaterial);
 var rightEar = new THREE.Mesh(earGeometry, earMaterial);
 
@@ -45,8 +45,8 @@ scene.add(rightEar);
 var update = function() {
  requestAnimationFrame(update);
  // 箱を回転させる
-cube.rotation.x += 0.01;
-　cube.rotation.y += 0.01;
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
 　leftEar.rotation.x += 0.01;
 　leftEar.rotation.y += 0.01;
 　rightEar.rotation.x += 0.01;
