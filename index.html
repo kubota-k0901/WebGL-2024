@@ -24,16 +24,16 @@ var directionalLight = new THREE.DirectionalLight(0xffffff);
  directionalLight.position.set(1, 1, 1);
 scene.add(directionalLight);
 // 犬の頭の形をした立方体の作成
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({color: 0x8B4513});
-const cube = new THREE.Mesh(geometry, material);
+var geometry = new THREE.BoxGeometry(1, 1, 1);
+var material = new THREE.MeshBasicMaterial({color: 0x8B4513});
+var cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 // 耳の作成
-const earGeometry = new THREE.BoxGeometry(0.2, 0.5, 0.2);
-const earMaterial = new THREE.MeshBasicMaterial({color: 0x8B4513});
-const leftEar = new THREE.Mesh(earGeometry, earMaterial);
-const rightEar = new THREE.Mesh(earGeometry, earMaterial);
+var earGeometry = new THREE.BoxGeometry(0.2, 0.5, 0.2);
+var earMaterial = new THREE.MeshBasicMaterial({color: 0x8B4513});
+var leftEar = new THREE.Mesh(earGeometry, earMaterial);
+var rightEar = new THREE.Mesh(earGeometry, earMaterial);
 
 leftEar.position.set(-0.6, 0.5, 0);
 rightEar.position.set(0.6, 0.5, 0);
