@@ -36,7 +36,7 @@ var box = new THREE.Mesh(doggeometry, material);
  box.position.z = 0;
  scene.add(box);
 
-var eargeometry = new THREE.BoxGeometry(0.5,1,32);
+var eargeometry = new THREE.SphereGeometry(0.5,1,32);
 var earMesh1 = new THREE.Mesh( eargeometry, material );
  earMesh1.position.set(-1,1,-0);
  scene.add( earMesh1 );
@@ -51,7 +51,7 @@ var eyeMesh1 = new THREE.Mesh( eyeGeometry, eyeMaterial );
 eyeMesh1.position.set( 0.5, 0.5, 0 );
 scene.add( eyeMesh1 );
 var eyeMesh2 = new THREE.Mesh( eyeGeometry, eyeMaterial );
-eyeMesh2.position.set( -0.5, 0.5, 0);
+eyeMesh2.position.set( -0.5, 0.5, 0 );
 scene.add( eyeMesh2 );
 
 var noseGeometry = new THREE.SphereGeometry(0.2,  32, 32);
