@@ -37,20 +37,20 @@ var box = new THREE.Mesh(doggeometry, material);
  scene.add(box);
 
 var eargeometry = new THREE.BoxGeometry(0.5,1,32);
-var earMesh1 = new THREE.MeshPhongMaterial({ color: 0xffffff});
+var earMesh1 = new THREE.Mesh( eargeometry, Material );
  earMesh1.position.set(-1,1,-5);
  scene.add( earMesh1 );
-Var earMesh2 = new THREE.MeshPhongMaterial({ color: 0xffffff});
+var earMesh2 = new THREE.Mesh( eargeometry, Material );
  eraMesh2.position.set(1,-1,-5);
  scene.add( earMesh2 );
 
 //球
 var eyeGeometry = new THREE.SphereGeometry( 0.1, 32, 32 );
-var eyeMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} );
+var eyeMaterial = new THREE.MeshPhongMaterial( {color: 0x0000ff,wireframe: true} );
 var eyeMesh1 = new THREE.Mesh( eyeGeometry, eyeMaterial );
 eyeMesh1.position.set( 0.5, 0.5, -5 );
 scene.add( eyeMesh1 );
-var eyeMesh2 = new THREE.MeshPhongMaterial({ color: 0xffffff,wireframe: true});
+var eyeMesh2 = new THREE.Mesh( eyeGeometry, eyeMaterial );
 eyeMesh2.position.set( -0.5, 0.5, -5);
 scene.add( eyeMesh2 );
 
@@ -65,11 +65,7 @@ scene.add( noseMesh );
 var update = function() {
  requestAnimationFrame(update);
  // 箱を回転させる
-box.rotation.x += 0.01;
- box.rotation.y += 0.01;
-sphere.rotation.x += 0.01;
-sphere.rotation.y += 0.01;
- renderer.render(scene, camera);
+renderer.render(scene, camera);
  };
  update();
 }
