@@ -18,7 +18,7 @@ var renderer = new THREE.WebGLRenderer();
  // シーンを作成
 var scene = new THREE.Scene();
  // カメラを作成
-var camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+var camera = new THREE.PerspectiveCamera(75, window.innerwidth / window.innerheight, 0.1, 1000);
  // 平行光源
 var directionalLight = new THREE.DirectionalLight(0xffffff);
  directionalLight.position.set(1, 1, 1);
