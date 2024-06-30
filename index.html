@@ -51,7 +51,7 @@ earMesh2.position.set( -1, 1, -5 );
 scene.add( earMesh2 );
 
 //目
-var eyeGeometry = new THREE.SphereGeometry(0.1, 32, 32);
+var eyeGeometry = new THREE.SphereGeometry(0.3, 32, 32);
 var eyeMaterial = new THREE.MeshPhongMaterial({ color: 0x0000ff,wireframe: true });
 var eyeMesh1 = new THREE.Mesh( eyeGeometry, eyeMaterial );
 eyeMesh1.position.set(-0.5, 0.5, -5);
@@ -59,6 +59,12 @@ scene.add( eyeMesh1 );
 var eyeMesh2 = new THREE.Mesh( eyeGeometry, eyeMaterial );
 eyeMesh2.position.set(0.5, 0.5, -5);
 scene.add( eyeMesh2 );
+
+var noseGeometry = new THREE.SphereGeometry(0.2, 32, 32);
+var noseMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff,wireframe: true });
+var noseMesh = new THREE.Mesh( noseGeometry, noseMaterial );
+noseMesh.position.set(0, 0, -5);
+scene.add( noseMesh );
 
 
 // 初回実行
