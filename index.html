@@ -67,6 +67,15 @@ var eyeMesh2 = new THREE.Mesh( eyeGeometry, eyeMaterial );
 eyeMesh2.position.set(0.5, 0.5, -4.5);
 //scene.add( eyeMesh2 );
 
+var irisGeometry = new THREE.SphereGeometry(0.11, 32, 32);
+var irisMaterial = new THREE.MeshPhongMaterial({ color: 0x000000});
+var irisMesh1 = new THREE.Mesh( irisGeometry, irisMaterial);
+irisMesh1.position.set(-0.5, 0.5, -4);
+var irisMesh2 = new THREE.Mesh( irisGeometry, irisMaterial);
+irisMesh2.position.set(0.5, 0.5, -4);
+
+	 
+
 //鼻
 var noseGeometry = new THREE.SphereGeometry(0.11, 32, 32);
 var noseMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff});
@@ -81,6 +90,8 @@ group.add(earMesh1);
 group.add(earMesh2);
 group.add(eyeMesh1);
 group.add(eyeMesh2);
+group.add(irisMesh1);
+group.add(irisMesh2);
 group.add(noseMesh);
 
 scene.add(group);
