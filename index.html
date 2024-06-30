@@ -94,6 +94,14 @@ renderer.render(scene, camera);
  };
  update();
 }
+
+tick();
+function tick(){
+ group.rotation.y += 0.01;
+ renderer.render(scene, camera);
+ requeestAnimationFrame(tick);
+}
+	
  window.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
