@@ -85,11 +85,16 @@ group.add(noseMesh);
 
 scene.add(group);
 
+//グループの軸
+var pivot = new THREE.Group();
+pivot.position.set(0, 0, -5);
+pivot.add( group );
+
 
 // 初回実行
 var update = function() {
  requestAnimationFrame(update);
- group.rotation.y += 0.01;
+ pivot.rotation.y += 0.01;
 renderer.render(scene, camera);
  };
  update();
