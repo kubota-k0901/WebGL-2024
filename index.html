@@ -33,39 +33,14 @@ var directionalLight = new THREE.DirectionalLight(0xffffff);
 scene.add(directionalLight);
 	 
 // 箱を作成
-var doggeometry = new THREE.BoxGeometry(1, 1, 1);
- var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
-
-var box = new THREE.Mesh(doggeometry, material);
- box.position.z = 0;
+var geometry = new THREE.BoxGeometry(1, 1, 1);
+ var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+ var box = new THREE.Mesh(geometry, material);
+ box.position.z = -5;
  scene.add(box);
 
-var eargeometry = new THREE.SphereGeometry(0.5,1,32);
-var earMesh1 = new THREE.Mesh( eargeometry, material );
- earMesh1.position.set(-1,1,-0);
- scene.add( earMesh1 );
-var earMesh2 = new THREE.Mesh( eargeometry, material );
- eraMesh2.position.set(1,-1,0);
- scene.add( earMesh2 );
 
-//球
-var eyeGeometry = new THREE.SphereGeometry( 0.1, 32, 32 );
-var eyeMaterial = new THREE.MeshPhongMaterial( {color: 0xffffff,wireframe: true} );
-var eyeMesh1 = new THREE.Mesh( eyeGeometry, eyeMaterial );
-eyeMesh1.position.set( 0.5, 0.5, 0 );
-scene.add( eyeMesh1 );
-var eyeMesh2 = new THREE.Mesh( eyeGeometry, eyeMaterial );
-eyeMesh2.position.set( -0.5, 0.5, 0 );
-scene.add( eyeMesh2 );
-
-var noseGeometry = new THREE.SphereGeometry(0.2,  32, 32);
-var noseMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff,wireframe: true});
-var noseMesh = new THREE.mesh( noseGeometry, noseMaterial );
-noseMesh.position.set(0, 0, 0);
-scene.add( noseMesh );
-
-
-	 // 初回実行
+// 初回実行
 var update = function() {
  requestAnimationFrame(update);
  
