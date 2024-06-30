@@ -41,7 +41,7 @@ scene.add(axisHelper);
 	 
 // 顔を作成
 var geometry = new THREE.SphereGeometry(1, 32, 32);
- var material = new THREE.MeshPhongMaterial({ color: 0x0000ff});
+ var material = new THREE.MeshPhongMaterial({ color: 0x745030});
  var face = new THREE.Mesh( geometry, material );
  face.position.set( 0, 0, -5 );
  //scene.add(face);
@@ -49,7 +49,7 @@ var geometry = new THREE.SphereGeometry(1, 32, 32);
 
 //耳
 var earGeometry = new THREE.ConeGeometry( 0.5, 1, 32 );
-var earMaterial = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
+var earMaterial = new THREE.MeshPhongMaterial( {color: 0x745030} );
 var earMesh1 = new THREE.Mesh( earGeometry, earMaterial );
 earMesh1.position.set( 0.5, 1, -5 );
 scene.add( earMesh1 );
@@ -87,7 +87,7 @@ scene.add(group);
 
 //グループの軸
 var pivot = new THREE.Group();
-pivot.position.set(0, 0, -5);
+pivot.position.set(0, 0, -2);
 pivot.add( group );
 
 scene.add(pivot);
