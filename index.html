@@ -44,10 +44,10 @@ var geometry = new THREE.SphereGeometry(1, 32, 32);
 var earGeometry = new THREE.ConeGeometry( 0.5, 1, 32 );
 var earMaterial = new THREE.MeshPhongMaterial( {color: 0xffffff,wireframe: true} );
 var earMesh1 = new THREE.Mesh( earGeometry, earMaterial );
-eyeMesh1.position.set( 1, 1, -5 );
+earMesh1.position.set( 1, 1, -5 );
 scene.add( earMesh1 );
-var eyeMesh2 = new THREE.Mesh( earGeometry, earMaterial );
-eyeMesh2.position.set( -1, 1, -5 );
+var earMesh2 = new THREE.Mesh( earGeometry, earMaterial );
+earMesh2.position.set( -1, 1, -5 );
 scene.add( earMesh2 );
 
 //目
